@@ -1,0 +1,18 @@
+# A static web page served by nginx, from Chainguard's minimal image, which
+# is rebuilt often to stay free of known vulnerabilities. The -dev variant
+# includes the shell ramekind uses to start it.
+Bootstrap: docker
+From: cgr.dev/chainguard/nginx:latest-dev
+
+%files
+    index.html /usr/share/nginx/html/index.html
+
+%post
+    # Serve on port 80, which Ramekin keeps free by moving gokrazy's
+    # dashboard to 8181.
+    cat > /etc/nginx/conf.d/nginx.default.conf <<'CONF'
+server {
+    listen 80;
+    root /usr/share/nginx/html;
+}
+CONF
