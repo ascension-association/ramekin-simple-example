@@ -1,6 +1,6 @@
 # Ramekin simple example
 
-A static web page served by nginx, packaged with [Ramekin](https://github.com/ascension-association/ramekin) for a gokrazy device. This is the project from Ramekin's quick start.
+A static web page served by nginx, packaged with [Ramekin](https://github.com/ascension-association/ramekin) for a gokrazy device. This is the project from the Web Page Example in Ramekin's README.
 
 - `example.def` is the Apptainer definition file: Chainguard's nginx image, the page, and port 80.
 - `index.html` is the page.
