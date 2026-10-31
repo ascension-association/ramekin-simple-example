@@ -50,3 +50,8 @@ releases:
   token_env: GITHUB_TOKEN
 
 channels: [stable]
+
+# Official firmware the devices run (gokrazy, kernel and ramekind for the board).
+firmware:
+  github: ascension-association/firmware.r76s
+  board: r76s
